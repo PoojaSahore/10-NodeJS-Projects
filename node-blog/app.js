@@ -6,21 +6,22 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer')
 var upload = multer({dest: './uploads'})
-var moment = require('moment')
 var session = require('express-session')
 var expressValidator = require('express-validator')
 
 var mongo = require('mongodb')
-var db = require('monk')('localhost/nodeblog')
+var db = require('monk')('localhost:27017/nodeblog')
 
 var index = require('./routes/index')
 var users = require('./routes/users')
 
 var app = express();
 
+app.locals.moment = require('moment')
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'jade')
+app.set('view engine', 'pug')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
