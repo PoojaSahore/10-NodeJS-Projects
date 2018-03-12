@@ -94,9 +94,75 @@ a.more {
   width: 100%;
 }
 
+label {
+  display: inline-block;
+  width: 180px;
+}
+
+input, select, textarea {
+  margin-bottom: 15px;
+}
+
+input[type='text'],input[type='email'], select, textarea {
+  padding: 3px;
+  height: 20px;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+select {
+  height: 28px;
+}
+
+textarea {
+  height: 70px;
+  width: 400px;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  list-style: none;
+}
+
+.alert-danger {
+  color: #A94442;
+  background-color: #F2DEDE;
+  border-color: #EBCCD1;
+}
+
+ul.success li {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #3C763D;
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  list-style: none;
+}
+
 footer {
   margin-top: 20px;
   text-align: center;
   height: 30px;
   border-top: 1px solid grey;
 }
+/* 
+.comment-form {
+  margin: 30px 0;
+}
+
+.comment {
+  background:  #ccc;
+  padding: 5px;
+  border: #666 solid 1px;
+  margin: 15px 0 20px;
+}
+
+.comment-name {
+  font-weight: bold;
+} */
