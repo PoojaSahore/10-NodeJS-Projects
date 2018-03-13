@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var sanitizeHtml = require('sanitize-html');
+//var sanitizeHtml = require('sanitize-html');
 var multer = require('multer')
 var upload = multer({dest: './uploads'})
 var mongo = require('mongodb');
@@ -42,23 +42,20 @@ router.post('/add', upload.single('mainimage'), function(req, res) {
     if (errors) {
         res.render('addpost', {
             errors: errors,
-            "title": title,
-            "body": body
+            title,
+            body
         });
     } else {
         var posts = db.get('posts');
 
         // Submit to database
         posts.insert({
-            "title": title,
-            "body": sanitizeHtml(body, {
-                allowedTags: [],
-                allowedAttributes: []
-            }),
-            "category": category,
-            "date": date,
-            "author": author,
-            "mainimage": mainimage
+            title,
+            body,
+            category,
+            date,
+            author,
+            mainimage
         }, function(err, post) {
             if (err) {
                 res.send('There was an issue submitting the post');
