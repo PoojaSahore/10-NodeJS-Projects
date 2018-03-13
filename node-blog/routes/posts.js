@@ -20,7 +20,7 @@ router.get('/add', function(req, res) {
 });
 
 router.post('/add', upload.single('mainimage'), function(req, res) {
-  var title= req.body.title
+  var title = req.body.title
   var category = req.body.category
   var body = req.body.body
   var author= req.body.author
@@ -64,12 +64,7 @@ router.post('/add', upload.single('mainimage'), function(req, res) {
                 res.redirect('/');
             }
         });
-
     }
-
-
-
-  //res.render('addpost', {'title': 'Add Post'});
 });
 
 module.exports = router;
