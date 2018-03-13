@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var sanitizeHtml = require('sanitize-html');
 var multer = require('multer')
 var upload = multer({dest: './uploads'})
 var mongo = require('mongodb');
@@ -50,7 +51,10 @@ router.post('/add', upload.single('mainimage'), function(req, res) {
         // Submit to database
         posts.insert({
             "title": title,
-            "body": body,
+            "body": sanitizeHtml(body, {
+                allowedTags: [],
+                allowedAttributes: []
+            }),
             "category": category,
             "date": date,
             "author": author,
