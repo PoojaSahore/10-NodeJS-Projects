@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 //var sanitizeHtml = require('sanitize-html');
 var multer = require('multer')
-var upload = multer({dest: './uploads'})
+var upload = multer({dest: './public/uploads/images/'})
 var mongo = require('mongodb');
 var db = require('monk')('localhost/nodeblog');
 
@@ -32,7 +32,7 @@ router.post('/add', upload.single('mainimage'), function(req, res) {
     var mainimage = req.file.filename
   else
     var mainimage = 'noimage.jpg'
-
+    console.log(mainimage)
   // Form validation
   req.checkBody('title', 'Title field is required').notEmpty();
   req.checkBody('body', 'Body field is required').notEmpty();
