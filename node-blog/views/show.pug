@@ -13,10 +13,10 @@ block content
         hr
         if post.comments
           h3 Comments
-            //- each comment, i in post.comments
-            .comment
-              p.comment-name #{post.comments.name}
-              p.comment-text #{post.comments.body}
+            each comment, i in post.comments
+              .comment
+                p.comment-name #{comment.name}
+                p.comment-text #{comment.body}
           br
       h3 Add Comment
         if errors

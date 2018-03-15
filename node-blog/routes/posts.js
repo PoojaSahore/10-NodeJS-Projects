@@ -7,7 +7,6 @@ var mongo = require('mongodb');
 var db = require('monk')('localhost/nodeblog');
 //var ObjectID = require('mongodb').ObjectID
 
-
 router.get('/show/:id', function(req, res) {
     var posts = db.get('posts')
     //console.log(posts)
@@ -114,7 +113,7 @@ router.post('/addcomment', function(req, res) {
         }
         console.log(comment)
         var posts = db.get('posts')
-        posts.update({"_id": id}, {$set: {"comments": comment}}, (err, doc) => {
+        posts.update({"_id": id}, {$push: {"comments": comment}}, (err, doc) => {
           if(err)
             throw err
           else {
