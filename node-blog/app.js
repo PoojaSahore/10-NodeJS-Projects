@@ -21,6 +21,7 @@ var app = express();
 app.locals.moment = require('moment')
 app.locals.truncateText = (text, length) => {
   var truncatedText = text.substring(0, length)
+  console.log(truncatedText)
   return truncatedText
 }
 

@@ -28,7 +28,7 @@ router.post('/add', function(req, res) {
 
         // Submit to database
         categories.insert({
-            "name": name,
+            name,
         }, function(err, category) {
             if (err) {
                 res.send('There was an issue submitting the category');
@@ -39,6 +39,19 @@ router.post('/add', function(req, res) {
             }
         });
     }
+});
+
+router.get('/show/:category', function(req, res) {
+    //var db = req.db
+    var posts = db.get('posts')
+    //console.log(posts)
+    posts.find({category: req.params.category}).then((posts) => {
+        res.render('index', {
+            'title': req.params.category,
+            posts
+        });  
+    })
+    .catch(e => {console.log(e)}) 
 });
 
 module.exports = router;

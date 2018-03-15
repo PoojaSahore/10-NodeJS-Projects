@@ -151,7 +151,7 @@ footer {
   height: 30px;
   border-top: 1px solid grey;
 }
-/* 
+
 .comment-form {
   margin: 30px 0;
 }
@@ -159,10 +159,6 @@ footer {
 .comment {
   background:  #ccc;
   padding: 5px;
-  border: #666 solid 1px;
+  /* border: #666 solid 1px; */
   margin: 15px 0 20px;
 }
-
-.comment-name {
-  font-weight: bold;
-} */
