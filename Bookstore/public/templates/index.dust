@@ -1,0 +1,40 @@
+{>"layouts/master" /}
+
+{<body}
+    <div class="large-3 columns book">
+        <img src="/img/node1.jpg">
+        <h4>abc</h4>
+        <p>qwertyuiop asdfghjkl zxcvbnm qwertyuiop asdfghjkl zxcvbnm</p>
+        <div class="price">Buy it for just <span>$10</span></div>
+        <br>
+        <a href="/books/details/1" class="button small">Book Details</a>
+    </div>
+
+    <div class="large-3 columns book">
+        <img src="/img/node2.jpg">
+        <h4>abc</h4>
+        <p>qwertyuiop asdfghjkl zxcvbnm qwertyuiop asdfghjkl zxcvbnm</p>
+        <div class="price">Buy it for just <span>$10</span></div>
+        <br>
+        <a href="/books/details/1" class="button small">Book Details</a>
+    </div>
+
+    <div class="large-3 columns book">
+        <img src="/img/node3.jpg">
+        <h4>abc</h4>
+        <p>qwertyuiop asdfghjkl zxcvbnm qwertyuiop asdfghjkl zxcvbnm</p>
+        <div class="price">Buy it for just <span>$10</span></div>
+        <br>
+        <a href="/books/details/1" class="button small">Book Details</a>
+    </div>
+
+    <div class="large-3 columns book">
+        <img src="/img/node4.jpg">
+        <h4>abc</h4>
+        <p>qwertyuiop asdfghjkl zxcvbnm qwertyuiop asdfghjkl zxcvbnm</p>
+        <div class="price">Buy it for just <span>$10</span></div>
+        <br>
+        <a href="/books/details/1" class="button small">Book Details</a>
+    </div>
+
+{/body}
