@@ -1,4 +1,0 @@
-n
-===========
-
-Simple technology bookstore
