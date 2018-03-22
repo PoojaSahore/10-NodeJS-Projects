@@ -1,18 +1,19 @@
 'use strict';
 
-var IndexModel = require('../models/index');
-
+var Book = require('../models/bookModel');
 
 module.exports = function (router) {
-
-    var model = new IndexModel();
-
     router.get('/', function (req, res) {
-        
-        
-        res.render('index', model);
-        
-        
+        Book.find({}, function(err, books) {
+            if(err) {
+                console.log(err)
+            }
+            var model = {
+                books
+            }
+            // console.log(books)
+            // console.log(model)
+            res.render('index', model)
+        })
     });
-
 };
