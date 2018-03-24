@@ -3,7 +3,7 @@
 {<body}
     {#books}
         <div class="large-3 columns book">
-            <img src="/img/{.cover}">
+            <img src="{.cover}">
             <h4>{.title}</h4>
             <p>{.description}</p>
             <div class="price">Buy it for just <span>{.price}</span></div>
